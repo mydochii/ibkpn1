@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Viral Terbaru</title><style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+background:#0f0f0f;
+font-family:Arial,sans-serif;
+color:#e0e0e0;
+}
+.wrapper{
+max-width:1000px;
+margin:auto;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+header{
+background:#1a1a1a;
+text-align:center;
+padding:16px;
+}
+.tags{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:12px;
+background:#1a1a1a;
+}
+.tags a{
+background:#2a2a2a;
+padding:6px 14px;
+border-radius:16px;
+text-decoration:none;
+color:#fff;
+font-size:13px;
+}
+.video-container{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+padding:15px;
+}
+video{
+width:100%;
+max-width:800px;
+border-radius:8px;
+}
+.video-info{
+padding:15px;
+background:#1a1a1a;
+text-align:center;
+}
+.join-section{
+text-align:center;
+padding:20px;
+background:#1a1a1a;
+}
+.btn{
+display:inline-block;
+padding:12px 24px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+margin:6px;
+}
+.btn-telegram{background:#0088cc;color:#fff;}
+.btn-whatsapp{background:#25d366;color:#fff;}
+footer{
+text-align:center;
+padding:14px;
+background:#1a1a1a;
+font-size:13px;
+}
+</style></head><body><div class="wrapper"><header>
+<h1>Video Viral Terbaru</h1>
+</header><div class="tags">
+<a href="https://otieu.com/4/10005133">VIRAL</a>
+<a href="https://otieu.com/4/10005133">PRANK</a>
+<a href="https://otieu.com/4/10005133">LIVE</a>
+<a href="https://otieu.com/4/10005133">SELEBGRAM</a>
+</div><div class="video-container">
+<video id="video" controls playsinline preload="metadata">
+<source src="https://cdn.videy.co/Q9xPGYrQ1.mp4" type="video/mp4">
+</video>
+</div><div class="video-info">
+<h2>Video Viral Terbaru</h2>
+<p>Tonton video viral terbaru yang sedang trending.</p>
+</div><div class="join-section">
+<a href="https://whatsapp.com/channel/0029Vb7anHa9WtC1AKr7Na1x" target="_blank" class="btn btn-telegram">Join Telegram</a>
+<a href="https://whatsapp.com/channel/0029Vb7anHa9WtC1AKr7Na1x" target="_blank" class="btn btn-whatsapp">Join WhatsApp</a>
+</div><footer>
+SELAMAT MENONTON
+</footer></div><script>
+
+const video=document.getElementById("video");
+const adLink="https://otieu.com/4/10005133";
+
+let firstAd=false;
+let secondAd=false;
+
+function openAd(){
+
+let win=window.open(adLink,"_blank");
+
+if(!win||win.closed||typeof win.closed=="undefined"){
+window.location.href=adLink;
+}
+
+}
+
+// iklan saat play
+video.addEventListener("play",function(){
+
+if(!firstAd){
+
+openAd();
+firstAd=true;
+
+setTimeout(function(){
+
+if(!secondAd){
+openAd();
+secondAd=true;
+}
+
+},20000);
+
+}
+
+});
+
+// klik layar video juga bisa munculkan iklan
+video.addEventListener("click",function(){
+
+if(!firstAd){
+openAd();
+firstAd=true;
+}
+
+});
+
+// klik tag buka iklan
+document.querySelectorAll(".tags a").forEach(function(tag){
+
+tag.addEventListener("click",function(e){
+
+e.preventDefault();
+openAd();
+
+});
+
+});
+
+</script></body>
+</html>
